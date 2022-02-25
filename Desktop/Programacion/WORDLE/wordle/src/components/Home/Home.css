@@ -17,14 +17,14 @@
     margin-top: 1.6rem;
 }
 .Line{
-    height: 70px;
+    height: 80px;
     border-bottom: 1px solid rgb(180, 180, 180);
     margin:auto;
     width: 15%;
 }
 @media (max-width: 500px) {
     .Line{
-        height: 70px;
+        height: 80px;
         border-bottom: 1px solid rgb(180, 180, 180);
         margin:auto;
         width: 65%;

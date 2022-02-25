@@ -22,7 +22,7 @@ align-items: center;
 display: flex;
 flex-direction: column;
 justify-content: center;
-margin-top: 150px;
+margin-top: 50px;
 }
 
 .edit{
@@ -103,3 +103,9 @@ text-transform: uppercase;
         margin-top:2rem
     }
 }
+@media (max-height: 700px) {
+    .allBox{
+        margin-top:1rem
+    }
+}
+
