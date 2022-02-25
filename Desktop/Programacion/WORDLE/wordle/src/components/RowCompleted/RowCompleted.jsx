@@ -10,15 +10,7 @@ export default function RowCompleted({word,solution}){
         
         const hola = document.getElementById(palabraPrueba[i])
         hola.className="keyabsent"
-        palabraPrueba.forEach((letter,index) =>{
-            const existLetter=solucionReal.includes(letter);
-            if (existLetter){
-                const pos = solucionReal.findIndex(l=>l===letter)
-                solucionReal[pos]=""
-                const hola = document.getElementById(palabraPrueba[index])
-                hola.className="keypresent"
-                palabra[index].status="present"
-            }})
+        
 
 
         palabraPrueba.forEach((letter,index) =>{
@@ -30,6 +22,15 @@ export default function RowCompleted({word,solution}){
                 palabra[index].status="correct"
             }
         })
+        palabraPrueba.forEach((letter,index) =>{
+            const existLetter=solucionReal.includes(letter);
+            if (existLetter){
+                const pos = solucionReal.findIndex(l=>l===letter)
+                solucionReal[pos]=""
+                const hola = document.getElementById(palabraPrueba[index])
+                hola.className="keypresent"
+                palabra[index].status="present"
+            }})
        
    ;
     
