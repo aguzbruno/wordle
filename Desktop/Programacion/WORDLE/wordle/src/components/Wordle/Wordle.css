@@ -1,0 +1,105 @@
+.empty{
+height: 50px;
+width: 50px;
+margin:3px;
+display: inline-flex;
+justify-content: center;
+font-size: 2.25rem;
+line-height: 2.5rem;
+text-align: center;
+caret-color: transparent;
+font-weight: 700;
+outline: solid 2px rgb(212 212 212);
+text-align: center;
+align-items: center;
+text-transform: uppercase;
+}
+.contenedor{
+    display: flex;
+}
+.allBox{
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top: 150px;
+}
+
+.edit{
+    height: 50px;
+width: 50px;
+margin:3px;
+display: inline-flex;
+justify-content: center;
+font-size: 2.25rem;
+line-height: 2.5rem;
+text-align: center;
+caret-color: transparent;
+font-weight: 700;
+outline: solid 2px rgb(212 212 212);
+text-align: center;
+align-items: center;
+text-transform: uppercase;
+    }
+.correct{
+    height: 50px;
+    width: 50px;
+    border-width: 2px;
+    background-color: #6AAA64;
+    margin:3px;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-align: center;
+    caret-color: transparent;
+    font-weight: 700;
+    color:white;
+    text-align: center;
+    align-items: center;
+    outline: solid 2px #6AAA64;
+    text-transform: uppercase;
+}
+.present{
+    height: 50px;
+    width: 50px;
+    border-width: 2px;
+    background-color: #c9b458;
+    margin:3px;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-align: center;
+    caret-color: transparent;
+    font-weight: 700;
+    color:white;
+    text-align: center;
+    align-items: center;
+    outline: solid 2px #c9b458;
+    text-transform: uppercase;
+}
+.absent{
+    height: 50px;
+    width: 50px;
+    background-color: #787c7e;
+    margin: 3px;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-align: center;
+    caret-color: transparent;
+    font-weight: 700;
+    color:white;
+    text-align: center;
+    align-items: center;
+    outline: solid 2px #787c7e;
+    text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+    .allBox{
+        margin-top:2rem
+    }
+}
