@@ -49,6 +49,8 @@ const [popUp, setPopup] = useState(true)
         <h3>La palabra era&nbsp; </h3> 
         <h3 style={{color: "green"}}>"{solution}"</h3>
         </div>
+        <h3 style ={{marginBottom:0}}>¿Conoces la palabra?</h3>
+        <h3>  <a style ={{color:"red",marginTop:0}} href={`https://dle.rae.es/${solution}`}  target="_blank" >Significado de "{solution}" segun la RAE</a></h3>
         <div className="autor">
         <h3>WORDLE &nbsp; </h3>
         <a  style={{color:"#c9b458",fontSize:"20px"}} target="_blank" href="https://github.com/aguzbruno">by AGUZBRUNO</a>

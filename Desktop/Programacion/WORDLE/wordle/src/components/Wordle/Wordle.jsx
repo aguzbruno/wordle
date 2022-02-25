@@ -17,8 +17,6 @@ export default function Wordle(){
     const [completedWords,setCompletedWords]= useState([]);
     const [GameStatus,setGameStatus]= useState("Playing");
     useWindow('keydown',handleKeyDown);
-    
-    
 
     function handleKeyDown(event){
         const letter = event.key.toUpperCase();
