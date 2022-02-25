@@ -169,5 +169,63 @@
     .enterKey {
       width: 15%;
     }
+    .keycorrect {
+      background-color: #6AAA64;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      font-size: .875rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 8.7%;
+      height: 3.5rem;
+      padding:6px;
+    }
+    
+    .keypresent {
+      background-color: #c9b458;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      font-size: .875rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 8.7%;
+      height: 3.5rem;
+      padding:6px;
+    }
+    
+    .keyabsent {
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      font-size: .875rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 8.7%;
+      height: 3.5rem;
+      padding:6px;
+    }
 
   }
