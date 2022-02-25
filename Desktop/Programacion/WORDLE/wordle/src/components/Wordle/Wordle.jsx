@@ -11,7 +11,7 @@ import WORDS from "../../assets/words.json"
 
 export default function Wordle(){
     const randomIndex = Math.floor(Math.random()*WORDS.length);
-    const [wordOfTheDay,setWordOfTheDay]= useState(WORDS[randomIndex].toUpperCase());
+    const [wordOfTheDay,setWordOfTheDay]= useState("OZONO");
     const [turn,setTurn]= useState(1);
     const [currentWord,setCurrentWord]= useState("");
     const [completedWords,setCompletedWords]= useState([]);
