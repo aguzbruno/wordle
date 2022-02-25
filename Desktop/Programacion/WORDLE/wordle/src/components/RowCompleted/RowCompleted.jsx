@@ -6,6 +6,7 @@ export default function RowCompleted({word,solution}){
     const palabra=[{status:"absent"},{status:"absent"},{status:"absent"},{status:"absent"},{status:"absent"}]
     function checkLetter (word,i){
         const palabraPrueba = word.split("");
+        const palabraPrueba2 = word.split("");
         const solucionReal = solution.split("");
         
         const hola = document.getElementById(palabraPrueba[i])
@@ -17,9 +18,11 @@ export default function RowCompleted({word,solution}){
             const exactLetter=letter===solucionReal[index];
             if (exactLetter){
                 solucionReal[index]=""
+                
                 const hola = document.getElementById(palabraPrueba[index])
                 hola.className="keycorrect"
                 palabra[index].status="correct"
+                palabraPrueba[index]="zz"
             }
         })
         palabraPrueba.forEach((letter,index) =>{
