@@ -39,7 +39,7 @@ export default function Keyboard ({keys,onKeyPressed}){
             </button>
         ))}
         {
-          <Delete className ="deleteKey" onClick ={handleDelete}  width={40} heigth={20}/>
+          <Delete className ="deleteKey" onClick ={handleDelete}  fill={"transparent"} strokeWidth={"20px"} stroke ={"black"} width={"25px"}/>
         
         }
 
