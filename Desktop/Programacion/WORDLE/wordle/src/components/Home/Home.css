@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     align-content: center;
     margin-top: 1.6rem;
+    position: relative;
 }
 .Line{
     height: 80px;
@@ -22,11 +23,41 @@
     margin:auto;
     width: 15%;
 }
+.Howto{
+    width: 2rem;
+    position: absolute;
+    left:0;
+    top:0;
+    cursor: pointer;
+}
+@media (max-width: 1200px) {
+    .Line{
+        height: 80px;
+        border-bottom: 1px solid rgb(180, 180, 180);
+        margin:auto;
+        width: 65%;
+    }
+    .Howto{
+        width: 2rem;
+        position: absolute;
+        left:0;
+        transform: translateY(50%);
+        cursor: pointer;
+    }
+}
+
 @media (max-width: 500px) {
     .Line{
         height: 80px;
         border-bottom: 1px solid rgb(180, 180, 180);
         margin:auto;
         width: 65%;
+    }
+    .Howto{
+        width: 2rem;
+        position: absolute;
+        left:0;
+        transform: translateY(50%);
+        cursor: pointer;
     }
 }

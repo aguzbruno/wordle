@@ -34,23 +34,29 @@ const [popUp, setPopup] = useState(true)
 
     alert("Copiado!");
   }
-  function cerrar(){
+  function close(){
     setPopup(false);
   }
+  const solutionLower=solution.toLowerCase();
 
   return (
       (popUp)?(
     <div className="modalViewContainer">
       <div className="modalContainer">
-          <button className="close" onClick={cerrar}>X</button>
-        {type === "won" ? <h2 style={{color: "37d034"}}>¡GANASTE! </h2>: <h2 style={{color: "red"}}>¡PERDISTE! </h2>}
+      <div className="top">
+      {type === "won" ? <h2 style={{color: "37d034"}}>¡GANASTE! </h2>: <h2 style={{color: "red"}}>¡PERDISTE! </h2>}
+            <button className="close" onClick={close}  >X</button>
+         </div>
+        
         {type === "won" ? <p>¡Felicitaciones! Has ganado la partida! </p>:<p>Lo sentimos, has perdido la partida</p> }
         <div className="word">
         <h3>La palabra era&nbsp; </h3> 
         <h3 style={{color: "green"}}>"{solution}"</h3>
         </div>
+        <div className="rae">
         <h3 style ={{marginBottom:0}}>¿Conoces la palabra?</h3>
-        <h3>  <a style ={{color:"red",marginTop:0}} href={`https://dle.rae.es/${solution}`}  target="_blank" >Significado de "{solution}" segun la RAE</a></h3>
+        <h3>  <a style ={{color:"red",marginTop:0}} href={`https://dle.rae.es/${solutionLower}`}  target="_blank" >Significado de "{solution}" segun la RAE</a></h3>
+        </div>
         <div className="autor">
         <h3>WORDLE &nbsp; </h3>
         <a  style={{color:"#c9b458",fontSize:"20px"}} target="_blank" href="https://github.com/aguzbruno">by AGUZBRUNO</a>

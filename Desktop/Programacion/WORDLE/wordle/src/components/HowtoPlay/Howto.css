@@ -1,0 +1,72 @@
+.modalViewContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    font-size: 16px;
+    
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: bgColor ease-in 0.4s
+}
+@keyframes bgColor {
+    0%{
+        opacity:0
+    }
+    50%{
+        opacity:0.5
+    }
+    100%{
+        opacity:1;
+    }
+    
+}
+
+.modalViewContainer:target{
+    --opacity:1;
+    --pointer:unset;
+}
+  .modalContainer {
+    text-align: left;
+    border: 2px solid #555;
+    width: 400px;
+    height: 600px;
+    background: #fffffff3;
+    padding: 5em 3em;
+    color: black;
+    box-shadow: 5px 5px 15px #000;
+    
+  }
+  .modalContainer p{
+      margin:0.2rem;
+  }
+  .modalContainer h3{
+    margin:0.2rem;
+}
+ .top{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    align-items: center;
+}
+.top h2{
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+    color:#37d034;
+    
+    
+}
+ .closes{
+    background: transparent;
+    border:0;
+    cursor: pointer;
+    position:absolute;
+    top:0;
+    right: 0;
+    font-size: 16px;
+    color:rgb(163, 163, 163)
+
+ }

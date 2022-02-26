@@ -10,6 +10,20 @@
     justify-content: center;
     
   }
+  .top{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.top h2{
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+}
   .contenedorCopy{
       display: flex;
       justify-content: center;
@@ -29,11 +43,15 @@
   text-align: center;
   
 }
+.rae{
+    margin-top: 1rem;
+}
 .word{
     font-size: 24px;
     display: flex;
     justify-content: center;
     width: 250px;
+    margin-top: 1rem;
     border-bottom: 1px solid rgb(180, 180, 180);
 }
 .word p{
@@ -63,6 +81,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .jugada p{
     font-size: 18px;
@@ -79,15 +99,14 @@
     box-shadow: 5px 5px 15px #000;
     position: relative;
     display: flex;
-    justify-content: center;
+
     flex-direction: column;
-    
+    position: relative;
     align-items: center;
   }
  .modalContainer h2{
-    text-align: center;
     font-size: 36px;
-    color:#37d034;
+    position: relative;
  }
   
   .puzzle {

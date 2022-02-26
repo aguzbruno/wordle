@@ -7,16 +7,27 @@ import Popup from '../Popup/Popup'
 import Keyboard from '../Keyboard/Keyboard'
 import {useEffect} from 'react';
 import { useWindow } from '../../hooks/useWindow';
-import WORDS from "../../assets/words.json"
+import WORDS from "../../assets/word.json"
+
 
 export default function Wordle(){
+    
     const randomIndex = Math.floor(Math.random()*WORDS.length);
     const [wordOfTheDay,setWordOfTheDay]= useState(WORDS[randomIndex].toUpperCase());
     const [turn,setTurn]= useState(1);
     const [currentWord,setCurrentWord]= useState("");
     const [completedWords,setCompletedWords]= useState([]);
     const [GameStatus,setGameStatus]= useState("Playing");
+    const [HowToPlay, setHowToPlay] = useState(false);
     useWindow('keydown',handleKeyDown);
+    
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //       setHowToPlay(false);
+    //     }, 5000);
+    //     return () => clearTimeout(timer);
+    //   }, [howtoplay]);
+
 
     function handleKeyDown(event){
         const letter = event.key.toUpperCase();
@@ -50,6 +61,7 @@ export default function Wordle(){
         setCurrentWord (newWord);
     }
     function onEnter (letter){
+
     if (WORDS.includes(currentWord.toLowerCase())){
      if (currentWord === wordOfTheDay){
          setCompletedWords([...completedWords,currentWord]);
@@ -76,6 +88,7 @@ export default function Wordle(){
     }
     let allowCharacters = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Ñ","Z","X","C","V","B","N","M"];  
     return<> 
+    
     {GameStatus === "Won" ? <Popup type="won" completedWords ={completedWords} solution={wordOfTheDay}/>: GameStatus === "Lost" ? <Popup type="lost" completedWords ={completedWords} solution={wordOfTheDay}/>:null}
     <div className="allBox">
         

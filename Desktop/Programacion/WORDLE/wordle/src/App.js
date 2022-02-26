@@ -1,14 +1,17 @@
 import './App.css';
 import Home from './components/Home/Home.jsx';
 import Wordle from './components/Wordle/Wordle.jsx';
-import {useEffect, useRef} from 'react';
+import {useState} from 'react';
+import {HowToContext} from "./Context/context"
 
 function App() {
+const [isHowToContext,setIsHowToContext] = useState(false)
   return (
     <div className="App">
-      
-      <Home/>
-      <Wordle/>
+      <HowToContext.Provider value={[isHowToContext,setIsHowToContext]}>
+        <Home/>
+        <Wordle/>
+  </HowToContext.Provider>
     </div>
   );
 }
