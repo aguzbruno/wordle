@@ -55,7 +55,7 @@ const [popUp, setPopup] = useState(true)
         </div>
         <div className="rae">
         <h3 style ={{marginBottom:0}}>¿Conoces la palabra?</h3>
-        <h3>  <a style ={{color:"red",marginTop:0}} href={`https://dle.rae.es/${solutionLower}`}  target="_blank" >Significado de "{solution}" segun la RAE</a></h3>
+        <h3>  <a style ={{color:"red",marginTop:0}} href={`https://dle.rae.es/${solutionLower}`}  target="_blank" >Presiona aqui para conocer el siginifcado segun la RAE</a></h3>
         </div>
         <div className="autor">
         <h3>WORDLE &nbsp; </h3>
