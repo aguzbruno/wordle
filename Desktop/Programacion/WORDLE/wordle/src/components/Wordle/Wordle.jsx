@@ -5,28 +5,37 @@ import RowEmpty from '../RowEmpty/RowEmpty'
 import RowCurrent from '../RowCurrent/RowCurrent'
 import Popup from '../Popup/Popup'
 import Keyboard from '../Keyboard/Keyboard'
-import {useEffect} from 'react';
+import Difficulty from '../Difficulty/Difficulty'
 import { useWindow } from '../../hooks/useWindow';
-import WORDS from "../../assets/word.json"
+import HARDWORDS from "../../assets/word.json";
+import MEDIUMWORDS from "../../assets/mediumword.json";
+import {useContext, useEffect} from 'react'
+import {DifficultyContext} from '../../Context/difficultycontext';
 
 
 export default function Wordle(){
     
-    const randomIndex = Math.floor(Math.random()*WORDS.length);
-    const [wordOfTheDay,setWordOfTheDay]= useState(WORDS[randomIndex].toUpperCase());
+    const randomIndexHard = Math.floor(Math.random()*HARDWORDS.length);
+    const randomIndexMedium = Math.floor(Math.random()*MEDIUMWORDS.length);
+    const WordHard = HARDWORDS[randomIndexHard].toUpperCase();
+    const WordMedium = MEDIUMWORDS[randomIndexMedium].toUpperCase();
+    const [wordOfTheDay,setWordOfTheDay]= useState(WordMedium);
     const [turn,setTurn]= useState(1);
     const [currentWord,setCurrentWord]= useState("");
     const [completedWords,setCompletedWords]= useState([]);
     const [GameStatus,setGameStatus]= useState("Playing");
     const [HowToPlay, setHowToPlay] = useState(false);
+    const [difficultyLevel,setDifficultyLevel] = useContext(DifficultyContext);
     useWindow('keydown',handleKeyDown);
     
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //       setHowToPlay(false);
-    //     }, 5000);
-    //     return () => clearTimeout(timer);
-    //   }, [howtoplay]);
+    useEffect(() => {
+        if(difficultyLevel==="easy" || difficultyLevel==="medium"){
+            setWordOfTheDay(WordMedium);
+        }
+        if(difficultyLevel ==="hard"){
+            setWordOfTheDay(WordHard)
+        }
+      }, [difficultyLevel]);
 
 
     function handleKeyDown(event){
@@ -62,7 +71,7 @@ export default function Wordle(){
     }
     function onEnter (letter){
 
-    if (WORDS.includes(currentWord.toLowerCase())){
+    if (HARDWORDS.includes(currentWord.toLowerCase())){
      if (currentWord === wordOfTheDay){
          setCompletedWords([...completedWords,currentWord]);
          setGameStatus("Won");
@@ -88,7 +97,8 @@ export default function Wordle(){
     }
     let allowCharacters = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Ñ","Z","X","C","V","B","N","M"];  
     return<> 
-    
+   
+    {<Difficulty/>}
     {GameStatus === "Won" ? <Popup type="won" completedWords ={completedWords} solution={wordOfTheDay}/>: GameStatus === "Lost" ? <Popup type="lost" completedWords ={completedWords} solution={wordOfTheDay}/>:null}
     <div className="allBox">
         

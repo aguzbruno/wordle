@@ -24,24 +24,12 @@
     text-align: center;
     font-size: 22px;
 }
-  .contenedorCopy{
+.contenedorBoton{
       display: flex;
       justify-content: center;
       text-align: center;
+      margin-bottom: 2rem;
       
-  }
-  .copy{
-  background: #117f0f;
-  color: #fff;
-  border: 0;
-  margin-top: 3em;
-  font-family: Montserrat, sans-serif;
-  box-shadow: 0 0 4px 1px #37d034;
-  cursor: pointer;
-  height: 40px;
-  width: 200px;
-  text-align: center;
-  
 }
 .rae{
     margin-top: 1rem;
@@ -89,9 +77,25 @@
     margin:0;
     padding:0;
 }
+.siguientePalabra{
+        background-color: #4CAF50; /* Green */
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        margin:0;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.19);
+        cursor:pointer;
+      
+}
   .modalContainer {
     border: 2px solid #555;
     width: 400px;
+    height: 650px;
     background: #fffffff3;
     padding: 5em 3em;
     color: black;
@@ -113,6 +117,7 @@
     width: 200px;
     margin: 0 auto;
     font-size: 30px;
+    margin-bottom: 1rem;
   }
   
   .puzzleWord {

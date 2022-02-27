@@ -1,0 +1,80 @@
+.modalViewContainer1 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgColor ease-in 0.4s
+  }
+.modalContainer1 h2{
+ color:black;
+ margin:0;
+ margin-top: -1rem;
+ font-size: 2rem;
+}
+@keyframes bgColor {
+  0%{
+      opacity:0
+  }
+  50%{
+      opacity:0.5
+  }
+  100%{
+      opacity:1;
+  }
+  
+}
+.botonDificultad{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  margin:0;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.19);
+  cursor:pointer;
+
+}
+.modalContainer1 {
+    border: 2px solid #555;
+    border-radius: 2rem;
+    width: 400px;
+    height: 350px;
+    background: #fffffff3;
+    color: black;
+    text-align: center;
+    box-shadow: 5px 5px 15px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+  .botonesDificultad{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+  }
+  @media (max-width: 500px) {
+    .modalContainer1 h2{
+      color:black;
+      margin:0;
+      margin-top: -1rem;
+     }
+     .modalContainer1 {
+        width: 350px;
+      
+      
+  }
+  }
+
+ 

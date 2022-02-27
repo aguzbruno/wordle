@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
+    position: relative;
 }
+
 .Wordle{
     width: 100%;
     display: flex;
@@ -30,6 +31,13 @@
     top:0;
     cursor: pointer;
 }
+.levelDifficulty{
+    color:red;
+    position: absolute; 
+    top:0;
+    right: 0;
+ 
+ }  
 @media (max-width: 1200px) {
     .Line{
         height: 80px;

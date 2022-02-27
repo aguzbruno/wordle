@@ -73,9 +73,9 @@ const [popUp, setPopup] = useState(true)
               </div>
           ))}
         </div>
-        {/* <div className="contenedorCopy">
-          <button className="copy" onClick={copiar}>Seleccionar y copiar</button>
-          </div> */}
+        <div className="contenedorBoton">
+          <a href="https://aguzbruno.github.io/wordle/" className="siguientePalabra" onClick={close}>PROXIMA PALABRA</a>
+          </div>
       </div>
     </div>
     ):null
