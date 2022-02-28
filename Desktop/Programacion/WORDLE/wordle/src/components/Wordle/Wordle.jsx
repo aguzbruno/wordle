@@ -7,6 +7,7 @@ import Popup from '../Popup/Popup'
 import Keyboard from '../Keyboard/Keyboard'
 import Difficulty from '../Difficulty/Difficulty'
 import { useWindow } from '../../hooks/useWindow';
+import ALLWORDS from "../../assets/allwords.json";
 import HARDWORDS from "../../assets/word.json";
 import MEDIUMWORDS from "../../assets/mediumword.json";
 import {useContext, useEffect} from 'react'
@@ -19,7 +20,7 @@ export default function Wordle(){
     const randomIndexMedium = Math.floor(Math.random()*MEDIUMWORDS.length);
     const WordHard = HARDWORDS[randomIndexHard].toUpperCase();
     const WordMedium = MEDIUMWORDS[randomIndexMedium].toUpperCase();
-    const [wordOfTheDay,setWordOfTheDay]= useState(WordMedium);
+    const [wordOfTheDay,setWordOfTheDay]= useState();
     const [turn,setTurn]= useState(1);
     const [currentWord,setCurrentWord]= useState("");
     const [completedWords,setCompletedWords]= useState([]);
@@ -29,11 +30,11 @@ export default function Wordle(){
     useWindow('keydown',handleKeyDown);
     
     useEffect(() => {
-        if(difficultyLevel==="easy" || difficultyLevel==="medium"){
+        if(difficultyLevel==="FACIL" || difficultyLevel==="INTERMEDIO"){
             setWordOfTheDay(WordMedium);
         }
-        if(difficultyLevel ==="hard"){
-            setWordOfTheDay(WordHard)
+        if(difficultyLevel ==="DIFICIL"){
+            setWordOfTheDay(WordHard);
         }
       }, [difficultyLevel]);
 
@@ -71,7 +72,7 @@ export default function Wordle(){
     }
     function onEnter (letter){
 
-    if (HARDWORDS.includes(currentWord.toLowerCase())){
+    if (ALLWORDS.includes(currentWord.toLowerCase())){
      if (currentWord === wordOfTheDay){
          setCompletedWords([...completedWords,currentWord]);
          setGameStatus("Won");
