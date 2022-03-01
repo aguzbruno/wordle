@@ -18,8 +18,10 @@ export default function Wordle(){
     
     const randomIndexHard = Math.floor(Math.random()*HARDWORDS.length);
     const randomIndexMedium = Math.floor(Math.random()*MEDIUMWORDS.length);
+    const randomIndexAllInOne = Math.floor(Math.random()*ALLWORDS.length);
     const WordHard = HARDWORDS[randomIndexHard].toUpperCase();
     const WordMedium = MEDIUMWORDS[randomIndexMedium].toUpperCase();
+    const WordAllInOne = ALLWORDS[randomIndexAllInOne].toUpperCase();
     const [wordOfTheDay,setWordOfTheDay]= useState();
     const [turn,setTurn]= useState(1);
     const [currentWord,setCurrentWord]= useState("");
@@ -35,6 +37,9 @@ export default function Wordle(){
         }
         if(difficultyLevel ==="DIFICIL"){
             setWordOfTheDay(WordHard);
+        }
+        if(difficultyLevel ==="TODOENUNO"){
+            setWordOfTheDay(WordAllInOne);
         }
       }, [difficultyLevel]);
 

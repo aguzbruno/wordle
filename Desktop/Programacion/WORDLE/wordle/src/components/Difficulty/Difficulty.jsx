@@ -21,6 +21,11 @@ const [difficulty, setDificulty] = useState(true);
     setDifficultyLevel("DIFICIL")
     setDificulty(false);
   }
+  function allInOne(){
+    setDifficultyLevel("TODOENUNO")
+    setDificulty(false);
+  }
+  
 
   return (
       (difficulty)?(
@@ -33,6 +38,8 @@ const [difficulty, setDificulty] = useState(true);
            <button style={{backgroundColor: "#FDE74C", color:"grey"}} className="botonDificultad" onClick={medium}>Intermedio</button>
            <br />
            <button style={{backgroundColor: "#F71735"}} className="botonDificultad"  onClick={hard}>Dificil</button>
+           <br />
+           <button style={{backgroundColor: "#AE847E"}} className="botonDificultad"  onClick={allInOne}>Todo en uno</button>
           </div> 
           </div>     
       </div>
