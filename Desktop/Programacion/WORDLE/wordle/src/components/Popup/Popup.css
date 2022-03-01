@@ -23,6 +23,7 @@
     height: 50px;
     text-align: center;
     font-size: 22px;
+    margin-top: -2rem;
 }
 .contenedorBoton{
       display: flex;
@@ -55,8 +56,8 @@
     border:0;
     cursor: pointer;
     position:absolute;
-    right: 15px;
-    top:20px;
+    right: 0px;
+    top:-40px;
     font-size: 16px;
 }
 .jugada{
@@ -69,8 +70,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 16px;
 }
 .jugada p{
     font-size: 18px;
@@ -95,7 +97,7 @@
   .modalContainer {
     border: 2px solid #555;
     width: 400px;
-    height: 650px;
+    height: 550px;
     background: #fffffff3;
     padding: 5em 3em;
     color: black;
@@ -112,6 +114,9 @@
     font-size: 36px;
     position: relative;
  }
+ .modalContainer p{
+     margin-top: -2rem;
+ }
   
   .puzzle {
     width: 200px;
@@ -123,4 +128,49 @@
   .puzzleWord {
     display: flex;
     justify-content: center;
+  }
+
+  @media (max-width: 500px) {
+    .modalContainer {
+        border: 2px solid #555;
+        width: 400px;
+        height: 650px;
+        background: #fffffff3;
+        padding: 5em 3em;
+        color: black;
+        text-align: center;
+        box-shadow: 5px 5px 15px #000;
+        position: relative;
+        display: flex;
+    
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+      }
+    .close{
+        background: transparent;
+        border:0;
+        cursor: pointer;
+        position:absolute;
+        right: -2rem;
+        top:0rem;
+        font-size: 16px;
+    }
+    .autor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+    .top h2{
+        height: 50px;
+        text-align: center;
+        font-size: 32px;
+        margin-top: 4rem;
+    }
+    .modalContainer p{
+        margin-top: 0rem;
+    }
   }

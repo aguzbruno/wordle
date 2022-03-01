@@ -59,7 +59,7 @@ const [popUp, setPopup] = useState(true)
         </div>
         <div className="autor">
         <h3>WORDLE &nbsp; </h3>
-        <a  style={{color:"#c9b458",fontSize:"20px"}} target="_blank" href="https://github.com/aguzbruno">by AGUZBRUNO</a>
+        <a  style={{color:"#c9b458"}} target="_blank" href="https://github.com/aguzbruno">by AGUZBRUNO</a>
         </div>
         <h3>Tu partida:</h3>
 
